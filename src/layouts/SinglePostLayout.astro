@@ -1,0 +1,47 @@
+---
+import Layout from './Layout.astro';
+import { fade } from 'astro:transitions';
+
+interface Props {
+  slug: string,
+  title: string;
+  heroImg: string;
+  description: string;
+  pubDate: string;
+  category: string[];
+}
+
+const { slug, title, heroImg, description, pubDate, category } = Astro.props;
+
+---
+
+<Layout title={title}>
+    <li class="max-w-article-size mx-auto w-full space-y-4">
+        <a class="text-soft-white border-extra-soft-white inline-flex cursor-pointer items-center gap-2 self-start rounded-full border px-6 py-2 transition-colors duration-200 hover:border-purple-500" href="/">
+          <svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" height="20" width="20"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" fill="#BFC7D2"></path></svg>
+      
+          Volver
+        </a>
+        <div transition:animate={fade({ duration: '0.4s' })}  class="border-extra-soft-white w-full max-w-[none] rounded-xl border">
+          <article>
+            <img
+            class="w-full h-[320px] rounded-t-xl object-cover"
+            width="1020"
+            height="320"
+            src={heroImg}
+            alt=""
+            />
+            
+            <div class="prose prose-zinc prose-invert lg:prose-xl px-12 py-12">
+              <time datetime={pubDate.toString()}>{pubDate}</time>
+              <div>
+                <span class="bg-green-700 rounded-3xl px-2 py-1 text-sm"
+                >{category}</span
+                >
+              </div>
+              <slot/>
+            </div>
+          </article>
+        </div>
+      </li>
+</Layout>

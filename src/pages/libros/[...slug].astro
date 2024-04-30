@@ -1,0 +1,21 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import SinglePostLayout from "@/layouts/SinglePostLayout.astro";
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+export const getStaticPaths = (async () => {
+  const posts = await getCollection("libros");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post
+  }));
+}) satisfies GetStaticPaths;
+
+const posts = Astro.props
+console.log(posts);
+
+const {Content} = await posts.render()
+---
+  <SinglePostLayout {...posts.data} slug={posts.slug}>
+    <Content/>
+  </SinglePostLayout>

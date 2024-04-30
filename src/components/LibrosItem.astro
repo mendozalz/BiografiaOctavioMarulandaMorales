@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import Libro1 from "../assets/libro1.jpeg";
+import Libro2 from "../assets/libro2.jpeg";
+import Libro3 from "../assets/libro3.jpeg";
+
+interface Props {
+  slug:string,
+  title: string;
+  heroImg: string;
+  description: string;
+  pubDate: string;
+  category: string[];
+}
+
+const { slug, heroImg } = Astro.props;
+
+---
+
+<div class="flex justify-center items-center gap-4">
+  <div
+    class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-4 lg:flex lg:items-center"
+  >
+    <a class="book-container" href=`/libros/${slug}`>
+      <div class="book">
+        <Image
+          src={heroImg}
+          width={300}
+          height={600}
+          alt="libro"
+          format={"avif"}
+        />
+      </div>
+    </a>
+  </div>
+</div>
