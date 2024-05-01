@@ -15,7 +15,7 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-69%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-67%"]);
 
   return (
     <section ref={targetRef} className="relative h-[300vh] w-[100vw]">
@@ -41,11 +41,11 @@ const Card = ({ card }: { card: CardType }) => {
           backgroundImage: `url(${card.url})`,
           backgroundRepeat: "no-repeat",
         }}
-        className="absolute inset-0 z-0 transition-transform duration-300 lg:bg-center lg:mt-0 lg:bg-contain bg-[length:750px_450px] bg-right -mt-[45%]"
+        className="absolute inset-0 z-0 transition-transform duration-300 lg:bg-center lg:mt-0 lg:bg-contain bg-[length:750px_450px] bg-right -mt-[60%]"
       ></div>
       <div className="absolute inset-0 z-10 grid grid-cols-1 lg:grid-cols-6 place-content-center">
         <div className="col-span-3 lg:pl-10">
-          <p className="text-[80px] lg:text-[150px] leading-[100px] font-normal uppercase text-black text-center lg:text-left mt-[130%] lg:mt-0">
+          <p className="text-[80px] lg:text-[150px] leading-[100px] font-normal uppercase text-black text-center lg:text-left mt-[115%] lg:mt-0">
             {card.title1}
           </p>
           <p className="pl-4 lg:text-[55px] text-[35px] leading-10 lg:leading-[100px] font-normal text-black lg:text-left text-center">

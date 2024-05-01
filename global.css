@@ -112,24 +112,14 @@ html {
   box-shadow: -10px 0 50px 10px #666;
 }
 
-@media only screen and (max-width: 600px) {
-  .book {
-    scale: 35%;
-  }
 
-  /* Menu Movil */
-
-  .navigation {
-    height: 100px !important;
-}
-}
 
 /* Menu Movil */
 
 .navMovil {
   position: fixed;
   right: 50px;
-  top: 25px;
+  top: 18px;
   & .menuMovil{
     width: 100%;
     max-height: 400px;
@@ -248,4 +238,16 @@ html {
           font-size: 35px;
       }
   }
+}
+
+@media only screen and (max-width: 600px) {
+  .book {
+    scale: 35%;
+  }
+
+  /* Menu Movil */
+
+  .navigation {
+    height: 80px !important;
+}
 }
