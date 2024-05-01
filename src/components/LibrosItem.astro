@@ -17,11 +17,11 @@ const { slug, heroImg } = Astro.props;
 
 ---
 
-<div class="flex justify-center items-center gap-4">
+<div class="libros-items">
   <div
-    class=" relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-4 lg:flex lg:items-center"
+    class=" relative w-full h-auto sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-4 lg:flex lg:items-center"
   >
-    <a class="book-container" href=`/libros/${slug}`>
+    <a class="book-container w-full h-[200px] lg:h-auto" href=`/libros/${slug}`>
       <div class="book">
         <Image
           src={heroImg}

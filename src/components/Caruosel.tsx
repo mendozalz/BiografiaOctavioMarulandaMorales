@@ -3,10 +3,8 @@ import { useRef } from "react";
 
 const Example = () => {
   return (
-    <div className="bg-neutral-800 ">
-
+    <div className="bg-white ">
       <HorizontalScrollCarousel />
-
     </div>
   );
 };
@@ -17,12 +15,12 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-85.8%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-69%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] w-[100vw] bg-orange-400 ">
-      <div className="sticky top-0 flex h-screen w-screen items-end overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-1">
+    <section ref={targetRef} className="relative h-[300vh] w-[100vw]">
+      <div className="sticky top-0 flex h-screen w-screen items-center lg:items-end overflow-hidden">
+        <motion.div style={{ x }} className="flex">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
@@ -36,21 +34,32 @@ const Card = ({ card }: { card: CardType }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[95vh] w-[100vw] overflow-hidden bg-white"
+      className="group relative h-[100vh] lg:h-[92vh] w-[100vw] overflow-hidden bg-white"
     >
       <div
         style={{
           backgroundImage: `url(${card.url})`,
-          backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
         }}
-        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
+        className="absolute inset-0 z-0 transition-transform duration-300 lg:bg-center lg:mt-0 lg:bg-contain bg-[length:750px_450px] bg-right -mt-[45%]"
       ></div>
-      <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
-          {/* {card.title} */}
-        </p>
+      <div className="absolute inset-0 z-10 grid grid-cols-1 lg:grid-cols-6 place-content-center">
+        <div className="col-span-3 lg:pl-10">
+          <p className="text-[80px] lg:text-[150px] leading-[100px] font-normal uppercase text-black text-center lg:text-left mt-[130%] lg:mt-0">
+            {card.title1}
+          </p>
+          <p className="pl-4 lg:text-[55px] text-[35px] leading-10 lg:leading-[100px] font-normal text-black lg:text-left text-center">
+            {card.title2}
+          </p>
+          <p className="pl-4 lg:leading-[100px] text-[18px] lg:text-[20px] font-normal text-black lg:text-left text-center">
+            {card.parrafo}
+          </p>
+          <div className="text-center">
+            <button className="bg-green-200 px-8 py-2 rounded-3xl text-[20px] uppercase mt-4">
+              Leer más
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -60,44 +69,54 @@ export default Example;
 
 type CardType = {
   url: string;
-  title: string;
+  title1: string;
+  title2: string;
+  parrafo?: string;
   id: number;
 };
 
 const cards: CardType[] = [
   {
-    url: "/temporal/OMM.jpeg",
-    title: "Title 1",
+    url: "/temporal/OMM_solo-Photoroom.png",
+    title1: "Octavio",
+    title2: "Marunlanda Morales",
+    parrafo: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío.",
     id: 1,
   },
   {
-    url: "/imgs/abstract/2.jpg",
-    title: "Title 2",
+    url: "/temporal/OMM_solo-Photoroom.png",
+    title1: "Octavio",
+    title2: "Marunlanda Morales",
     id: 2,
   },
   {
-    url: "/temporal/OMM.jpeg",
-    title: "Title 3",
+    url: "/temporal/OMM_solo-Photoroom.png",
+    title1: "Octavio",
+    title2: "Marunlanda Morales",
     id: 3,
   },
-  {
-    url: "/imgs/abstract/4.jpg",
-    title: "Title 4",
+  /* {
+    url: "/temporal/OMM_solo-Photoroom.png",
+    title1: "Octavio",
+    title2: "Marunlanda Morales",
     id: 4,
   },
   {
-    url: "/temporal/OMM.jpeg",
-    title: "Title 5",
+    url: "/temporal/OMM_solo-Photoroom.png",
+    title1: "Octavio",
+    title2: "Marunlanda Morales",
     id: 5,
   },
   {
-    url: "/imgs/abstract/6.jpg",
-    title: "Title 6",
+    url: "/temporal/OMM_solo-Photoroom.png",
+    title1: "Octavio",
+    title2: "Marunlanda Morales",
     id: 6,
   },
   {
-    url: "/temporal/OMM.jpeg",
-    title: "Title 7",
+    url: "/temporal/OMM_solo-Photoroom.png",
+    title1: "Octavio",
+    title2: "Marunlanda Morales",
     id: 7,
-  },
+  }, */
 ];
