@@ -1,4 +1,7 @@
 ---
+import Footer from "@/components/Footer.astro";
+import Nav from "@/components/Nav";
+import SmoothScroll from "@/components/SmoothScroll";
 import { ViewTransitions } from "astro:transitions";
 interface Props {
   title: string;
@@ -29,33 +32,35 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     />
 
     <!-- Canonical URL -->
-  <link rel="canonical" href={canonicalURL} />
+    <link rel="canonical" href={canonicalURL} />
 
-  <!-- Primary Meta Tags -->
-  <title>{title}</title>
-  <meta name="title" content={title} />
-  <meta name="description" content={description} />
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content={Astro.url} />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:image" content={new URL(image, Astro.url)} />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content={Astro.url} />
-  <meta property="twitter:title" content={title} />
-  <meta property="twitter:description" content={description} />
-  <meta property="twitter:image" content={new URL(image, Astro.url)} />
-  <!-- Transition -->
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
+    <!-- Transition -->
 
     <ViewTransitions />
   </head>
-  <body>
-    <main class="main">
+  <body class="overflow-x-hidden">
+    <SmoothScroll client:load>
+      <Nav client:load />
       <slot />
-    </main>
+      <Footer />
+    </SmoothScroll>
   </body>
 </html>

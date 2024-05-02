@@ -1,47 +1,81 @@
 ---
-import Layout from './Layout.astro';
-import { fade } from 'astro:transitions';
+import Autor from "@/components/Autor.astro";
+import Layout from "./Layout.astro";
+import { fade } from "astro:transitions";
 
 interface Props {
-  slug: string,
+  slug: string;
   title: string;
+  autor: string
+  bio: string
   heroImg: string;
   description: string;
   pubDate: string;
   category: string[];
 }
 
-const { slug, title, heroImg, description, pubDate, category } = Astro.props;
-
+const { slug, title, heroImg, description, pubDate, category, autor, bio } = Astro.props;
 ---
 
 <Layout title={title}>
-    <li class="max-w-article-size mx-auto w-full space-y-4">
-        <a class="text-soft-white border-extra-soft-white inline-flex cursor-pointer items-center gap-2 self-start rounded-full border px-6 py-2 transition-colors duration-200 hover:border-purple-500" href="/">
-          <svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" height="20" width="20"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" fill="#BFC7D2"></path></svg>
-      
+  <div class="mt-[100px] lg:mt-[130px] p-6">
+    <div class="lg:max-w-[85vw] m-auto">
+      <div>
+        <a
+          class="text-black inline-flex cursor-pointer items-center gap-2 self-start rounded-full border px-6 py-2 transition-colors duration-200 hover:border-black/70"
+          href="/"
+        >
+          <svg
+            
+            viewBox="0 -960 960 960"
+            xmlns="http://www.w3.org/2000/svg"
+            height="20"
+            width="20"
+            ><path
+            class=""
+              d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"
+              fill="#000000"></path></svg
+          >
           Volver
         </a>
-        <div transition:animate={fade({ duration: '0.4s' })}  class="border-extra-soft-white w-full max-w-[none] rounded-xl border">
+      </div>
+      <h1
+        class="text-[36px] text-left lg:text-center lg:text-[56px] font-semibold mt-[50px]"
+      >
+        {title}
+      </h1>
+      <div class="flex justify-start items-center gap-4 w-full h-20">
+        <div>
+          <span class="border-green-700 border-2 text-green-700 font-medium rounded-3xl px-4 py-2 text-base"
+            >{category}</span
+          >
+        </div>
+        <time class="text-[]" datetime={pubDate.toString()}>{pubDate}</time>
+      </div>
+      <div class="w-full m-auto lg:max-w-[85vw] rounded-xl">
+        <img
+          class="w-full h-[380px] rounded-xl object-cover"
+          width="1020"
+          height="320"
+          src={heroImg}
+          alt=""
+        />
+      </div>
+      <li class="max-w-article-size mx-auto w-full h-auto space-y-4 list-none">
+        <div
+          transition:animate={fade({ duration: "0.4s" })}
+          class="w-full max-w-[none] rounded-xl"
+        >
           <article>
-            <img
-            class="w-full h-[320px] rounded-t-xl object-cover"
-            width="1020"
-            height="320"
-            src={heroImg}
-            alt=""
-            />
-            
-            <div class="prose prose-zinc prose-invert lg:prose-xl px-12 py-12">
-              <time datetime={pubDate.toString()}>{pubDate}</time>
-              <div>
-                <span class="bg-green-700 rounded-3xl px-2 py-1 text-sm"
-                >{category}</span
-                >
-              </div>
-              <slot/>
+            <div class="prose prose-zinc prose-invert lg:prose-xl lg:px-12 pb-12">
+              <slot />
             </div>
           </article>
         </div>
       </li>
+    </div>
+    <div class="img-autor">
+      <Autor autor={autor} bio={bio}/>
+    </div>
+  </div>
 </Layout>

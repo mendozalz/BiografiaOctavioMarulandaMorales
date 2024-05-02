@@ -1,13 +1,15 @@
 ---
 heroImg: "/img/libro1.jpeg"
 title: "La rondas y juegos infantiles"
+autor: "Octavio Marulanda Morales"
+bio: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío."
 description: "Historias breves de juego La rondas y juegos infantiles"
 pubDate: "28 Abril 2024"
 category: ["Infantiles", " Descargable"]
 
 ---
 
-# La rondas y juegos infantiles
+## Subtitulo
 
 An h1 header
 Paragraphs are separated by a blank line.
@@ -33,7 +35,7 @@ second item
 third item
 Note again how the actual text starts at 4 columns in (4 characters from the left side). Here's a code sample:
 
-# Let me re-iterate ...
+## Let me re-iterate ...
 for i in 1 .. 10 { do-something(i) }
 As you probably guessed, indented 4 spaces. By the way, instead of indenting the block, you can use delimited blocks, if you like:
 
@@ -43,7 +45,7 @@ define foobar() {
 (which makes copying & pasting easier). You can optionally mark the delimited block for Pandoc to syntax highlight it:
 
 import time
-# Quick, count to ten!
+## Quick, count to ten!
 for i in range(10):
     # (but not *too* quick)
     time.sleep(0.5)

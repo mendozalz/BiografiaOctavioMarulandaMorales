@@ -5,12 +5,9 @@ import { getCollection } from 'astro:content';
 
 
 const posts = await getCollection("libros")
-console.log(posts);
-
-
 ---
 
-<div class="bg-white w-full h-[80vh] lg:max-w-[85vw] lg:h-[90vh] py-10 m-auto grid place-items-center overflow-hidden p-4">
+<div class="bg-white w-full h-[80vh] lg:max-w-[85vw] lg:h-auto py-10 m-auto grid place-items-center overflow-hidden p-4 lg:pb-32">
 
     <h1 class="uppecase text-[32px] lg:text-[60px] text-green-900 text-center font-bold">Libros y Documentos</h1>
     <p class="text-center w-full lg:max-w-[40vw] m-auto">Eiusmod adipisicing nostrud voluptate ipsum eu qui enim aute cupidatat ea magna. Laborum ipsum reprehenderit cupidatat incididunt velit minim consectetur.</p>

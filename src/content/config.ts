@@ -6,6 +6,8 @@ const libros = defineCollection({
     schema:z.object({
         heroImg: z.string(),
         title: z.string(),
+        autor: z.string(),
+        bio: z.string(),
         description: z.string(),
         pubDate: z.string(),
         category: z.string().array()
