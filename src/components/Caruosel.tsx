@@ -48,7 +48,7 @@ const Card = ({ card }: { card: CardType }) => {
           <p className="text-[75px] lg:text-[150px] lg:leading-[140px] font-normal uppercase text-black text-center lg:text-left mt-[120%] lg:mt-0 font-cinzel">
             {card.title1}
           </p>
-          <p className="lg:pl-4 lg:text-[115px] text-[32px] lg:leading-[100px] leading-[0px] font-normal text-black lg:text-left text-center font-irregardless tracking-[10px]">
+          <p className="lg:pl-4 lg:text-[115px] text-[32px] lg:leading-[100px] leading-[5px] font-normal text-black lg:text-left text-center font-irregardless tracking-[10px]">
             {card.title2}
           </p>
           <p className="lg:pl-4 lg:leading-[32px] text-[18px] lg:text-[30px] font-normal text-black lg:text-left text-center font-cinzel mt-8 lg:mt-14">
