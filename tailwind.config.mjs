@@ -4,7 +4,9 @@ export default {
 	theme: {
 		extend: {
 			fontFamily:{
-				snas: ["Poppins", "system-ui"]
+				sans: ["Poppins", "system-ui"],
+				cinzel: ["Cinzel"],
+				irregardless: ["Irregardless"]
 			},
 			colors: {
 				'dark-blue': '#10151D',

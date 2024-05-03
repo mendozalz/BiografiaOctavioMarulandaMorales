@@ -5,12 +5,12 @@ import Libro2 from "../assets/libro2.jpeg";
 import Libro3 from "../assets/libro3.jpeg";
 
 interface Props {
-  slug:string,
-  title: string;
+  slug?:string,
+  title?: string;
   heroImg: string;
-  description: string;
-  pubDate: string;
-  category: string[];
+  description?: string;
+  pubDate?: string;
+  category?: string[];
 }
 
 const { slug, heroImg } = Astro.props;

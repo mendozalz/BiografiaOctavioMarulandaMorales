@@ -10,7 +10,8 @@ const libros = defineCollection({
         bio: z.string(),
         description: z.string(),
         pubDate: z.string(),
-        category: z.string().array()
+        category: z.string().array(),
+        descargar: z.string()
     })
 })
 

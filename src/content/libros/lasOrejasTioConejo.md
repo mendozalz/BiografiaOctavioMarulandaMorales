@@ -1,11 +1,12 @@
 ---
-heroImg: "/img/libro2.jpeg"
+heroImg: "/portadasLibros/tio_conejo_portada.jpg"
 title: "Las orejas de tio conejo"
 autor: "Octavio Marulanda Morales"
 bio: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío."
 description: "Historias breves de las orejas de tio conejo"
 pubDate: "28 Abril 2024"
 category: ["Infantiles", " Editorial"]
+descargar: "#"
 ---
 
 ## Subtitulo
