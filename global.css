@@ -2,33 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  @font-face {
-    font-family: "Poppins";
-    src: url("./fonts/Poppins/Poppins-Regular.ttf");
-    font-weight: 400;
-  }
-  @font-face {
-    font-family: "Cinzel";
-    src: url("./fonts/Cinzel/Cinzel-Black.otf");
-    font-weight: 800;
-  }
-  @font-face {
-    font-family: "Cinzel";
-    src: url("./fonts/Cinzel/Cinzel-Bold.otf");
-    font-weight: 900;
-  }
-  @font-face {
-    font-family: "Cinzel";
-    src: url("./fonts/Cinzel/Cinzel-Regular.otf");
-    font-weight: 400;
-  }
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("./fonts/Cinzel/Cinzel-Black.otf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("./fonts/Cinzel/Cinzel-Bold.otf");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("./fonts/Cinzel/Cinzel-Regular.otf");
+  font-weight: 400;
+}
 
-  @font-face {
-    font-family: "Irregardless";
-    src: url("./fonts/Irregardless/fonnts.com-Irregardless_Variable.otf");
-    font-weight: 300;
-  }
+@font-face {
+  font-family: "Irregardless";
+  src: url("./fonts/Irregardless/fonnts.com-Irregardless_Variable.otf");
+  font-weight: 300;
 }
 
 * {
@@ -267,36 +265,36 @@ html {
 
 /* Efecto Zoom Parallax */
 
-.zoomContainer{
+.zoomContainer {
   height: 300vh;
   position: relative;
-  & .zoomSticky{
-      position: sticky;
-      overflow: hidden;
+  & .zoomSticky {
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    height: 100vh;
+    & .zoomEl {
+      width: 100%;
+      height: 100%;
       top: 0;
-      height: 100vh;
-      & .zoomEl{
-          width: 100%;
-          height: 100%;
-          top: 0;
-          position: absolute;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          & .zoomImageContainer{
-              position: relative;
-              width: 25vw;
-              height: 25vh;
-              img{
-                  object-fit: cover;
-                  filter: blur()
-              }
-          }
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & .zoomImageContainer {
+        position: relative;
+        width: 25vw;
+        height: 25vh;
+        img {
+          object-fit: cover;
+          filter: blur();
+        }
       }
+    }
   }
 }
 
-.zoomEl{
+.zoomEl {
   width: 100%;
   height: 100%;
   top: 0;
@@ -304,72 +302,72 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  .zoomImageContainer{
-      position: relative;
+  .zoomImageContainer {
+    position: relative;
+    width: 25vw;
+    height: 25vh;
+    img {
+      object-fit: cover;
+    }
+  }
+  &:nth-of-type(2) {
+    .zoomImageContainer {
+      top: -30vh;
+      left: 5vw;
+      width: 35vw;
+      height: 30vh;
+      clip-path: polygon(0 0, 100% 0, 100% 110%, 0 110%);
+    }
+  }
+  &:nth-of-type(3) {
+    .zoomImageContainer {
+      top: -22vh;
+      left: -25vw;
+      width: 20vw;
+      height: 45vh;
+      clip-path: polygon(0 0, 95% 0, 95% 1000%, 0 1000%);
+    }
+  }
+  &:nth-of-type(4) {
+    .zoomImageContainer {
+      left: 26.5vw;
       width: 25vw;
       height: 25vh;
-      img{
-          object-fit: cover;
-      }
+      clip-path: polygon(0 0, 95% 0, 95% 105%, 0 105%);
+    }
   }
-  &:nth-of-type(2){
-      .zoomImageContainer{
-          top: -30vh;
-          left: 5vw;
-          width: 35vw;
-          height: 30vh;
-          clip-path: polygon(0 0, 100% 0, 100% 110%, 0 110%);
-      }
+  &:nth-of-type(5) {
+    .zoomImageContainer {
+      top: 27.5vh;
+      left: 5vw;
+      width: 20vw;
+      height: 25vh;
+      clip-path: polygon(0 10%, 95% 10%, 95% 130%, 0 130%);
+    }
   }
-  &:nth-of-type(3){
-      .zoomImageContainer{
-          top: -22vh;
-          left: -25vw;
-          width: 20vw;
-          height: 45vh;
-          clip-path: polygon(0 0, 95% 0, 95% 1000%, 0 1000%);
-      }
+  &:nth-of-type(6) {
+    .zoomImageContainer {
+      top: 27.5vh;
+      left: -22.5vw;
+      width: 30vw;
+      height: 25vh;
+      clip-path: polygon(0 15%, 100% 15%, 100% 130%, 0 130%);
+    }
   }
-  &:nth-of-type(4){
-      .zoomImageContainer{
-          left: 26.5vw;
-          width: 25vw;
-          height: 25vh;
-          clip-path: polygon(0 0, 95% 0, 95% 105%, 0 105%);
-      }
-  }
-  &:nth-of-type(5){
-      .zoomImageContainer{
-          top: 27.5vh;
-          left: 5vw;
-          width: 20vw;
-          height: 25vh;
-          clip-path: polygon(0 10%, 95% 10%, 95% 130%, 0 130%);
-      }
-  }
-  &:nth-of-type(6){
-      .zoomImageContainer{
-          top: 27.5vh;
-          left: -22.5vw;
-          width: 30vw;
-          height: 25vh;
-          clip-path: polygon(0 15%, 100% 15%, 100% 130%, 0 130%);
-      }
-  }
-  &:nth-of-type(7){
-      .zoomImageContainer{
-          top: 22.5vh;
-          left: 25vw;
-          width: 15vw;
-          height: 15vh;
-          clip-path: polygon(20% 20%, 100% 20%, 100% 130%, 20% 130%);
-      }
+  &:nth-of-type(7) {
+    .zoomImageContainer {
+      top: 22.5vh;
+      left: 25vw;
+      width: 15vw;
+      height: 15vh;
+      clip-path: polygon(20% 20%, 100% 20%, 100% 130%, 20% 130%);
+    }
   }
 }
 
 /* Parrafos Animados */
 
-.parrafosAnimados{
+.parrafosAnimados {
   display: flex;
   font-size: 60px;
   line-height: 1;
@@ -377,17 +375,16 @@ html {
   max-width: 1280px;
   color: black;
   flex-wrap: wrap;
-  & .palabras{
+  & .palabras {
     position: relative;
     margin-right: 12px;
     margin-top: 12px;
-    & .sombra{
+    & .sombra {
       position: absolute;
       opacity: 20%;
     }
-  } 
+  }
 }
-
 
 @media only screen and (max-width: 600px) {
   .book {
@@ -401,7 +398,7 @@ html {
   }
 
   /* Efecto Zoom Parallax */
-  .zoomEl{
+  .zoomEl {
     width: 100%;
     height: 80%;
     top: 0;
@@ -409,91 +406,89 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    .zoomImageContainer{
-        position: relative;
-        width: 100vw !important;
-        height: 45vh !important;
-        top: 10%;
-        
-        img{
-            object-fit: cover;
-        }
+    .zoomImageContainer {
+      position: relative;
+      width: 100vw !important;
+      height: 45vh !important;
+      top: 10%;
+
+      img {
+        object-fit: cover;
+      }
     }
-    &:nth-of-type(2){
-        .zoomImageContainer{
-            top: -25vh;
-            left: 13vw;
-            width: 35vw;
-            height: 30vh;
-            clip-path: polygon(0 0, 100% 0, 100% 110%, 0 110%) !important;
-            z-index: -1 !important;
-        }
+    &:nth-of-type(2) {
+      .zoomImageContainer {
+        top: -25vh;
+        left: 13vw;
+        width: 35vw;
+        height: 30vh;
+        clip-path: polygon(0 0, 100% 0, 100% 110%, 0 110%) !important;
+        z-index: -1 !important;
+      }
     }
-    &:nth-of-type(3){
-        .zoomImageContainer{
-            top: -33vh;
-            left: -7vw;
-            width: 20vw;
-            height: 45vh;
-            clip-path: polygon(0 30%, 50% 30%, 50% 95%, 0 95%);
-            z-index: -1 !important;
-        }
+    &:nth-of-type(3) {
+      .zoomImageContainer {
+        top: -33vh;
+        left: -7vw;
+        width: 20vw;
+        height: 45vh;
+        clip-path: polygon(0 30%, 50% 30%, 50% 95%, 0 95%);
+        z-index: -1 !important;
+      }
     }
-    &:nth-of-type(4){
-        .zoomImageContainer{
-            left: 45.5vw !important;
-            top: -5% !important;
-            width: 25vw;
-            height: 25vh;
-            clip-path: polygon(0% 10%, 55% 10%, 55% 33%, 0 33%);
-            z-index: -1;
-        }
+    &:nth-of-type(4) {
+      .zoomImageContainer {
+        left: 45.5vw !important;
+        top: -5% !important;
+        width: 25vw;
+        height: 25vh;
+        clip-path: polygon(0% 10%, 55% 10%, 55% 33%, 0 33%);
+        z-index: -1;
+      }
     }
-    &:nth-of-type(5){
-        .zoomImageContainer{
-            top: 27.5vh;
-            left: 5vw;
-            width: 20vw;
-            height: 25vh;
-            clip-path: polygon(35% 20%, 95% 20%, 95% 130%, 35% 130%);
-        }
+    &:nth-of-type(5) {
+      .zoomImageContainer {
+        top: 27.5vh;
+        left: 5vw;
+        width: 20vw;
+        height: 25vh;
+        clip-path: polygon(35% 20%, 95% 20%, 95% 130%, 35% 130%);
+      }
     }
-    &:nth-of-type(6){
-        .zoomImageContainer{
-            top: 29vh;
-            left: -15vw !important;
-            width: 30vw;
-            height: 25vh;
-            clip-path: polygon(0 15%, 55% 15%, 55% 130%, 0 130%);
-        }
+    &:nth-of-type(6) {
+      .zoomImageContainer {
+        top: 29vh;
+        left: -15vw !important;
+        width: 30vw;
+        height: 25vh;
+        clip-path: polygon(0 15%, 55% 15%, 55% 130%, 0 130%);
+      }
     }
-    &:nth-of-type(7){
-        .zoomImageContainer{
-            top: 30.5vh !important;
-            left: 30vw !important;
-            width: 40vw !important;
-            height: 14vh !important;
-            clip-path: polygon(20% 20%, 100% 20%, 100% 130%, 20% 130%);
-        }
+    &:nth-of-type(7) {
+      .zoomImageContainer {
+        top: 30.5vh !important;
+        left: 30vw !important;
+        width: 40vw !important;
+        height: 14vh !important;
+        clip-path: polygon(20% 20%, 100% 20%, 100% 130%, 20% 130%);
+      }
     }
   }
 
   /* Parrafos Animados */
 
-.parrafosAnimados{
-  font-size: 20px;
-  padding: 0px 16px 20px;
-  letter-spacing: 1px;
-  & .palabras{
-    position: relative;
-    margin-right: 5px;
-    margin-top: 8px;
-    & .sombra{
-      position: absolute;
-      opacity: 20%;
+  .parrafosAnimados {
+    font-size: 20px;
+    padding: 0px 16px 20px;
+    letter-spacing: 1px;
+    & .palabras {
+      position: relative;
+      margin-right: 5px;
+      margin-top: 8px;
+      & .sombra {
+        position: absolute;
+        opacity: 20%;
+      }
     }
-  } 
-  } 
-
+  }
 }
-

@@ -4,9 +4,9 @@ export default {
 	theme: {
 		extend: {
 			fontFamily:{
-				sans: ["Poppins", "system-ui"],
-				cinzel: ["Cinzel"],
-				irregardless: ["Irregardless"]
+				sans: ["Poppins", "sans-serif"],
+				cinzel: ["Cinzel", "sans-serif"],
+				irregardless: ["Irregardless", "sans-serif"]
 			},
 			colors: {
 				'verde-claro': '#bbd1d5',

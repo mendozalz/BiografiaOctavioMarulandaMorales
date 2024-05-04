@@ -1,10 +1,12 @@
 ---
 import LibrosItem from "./LibrosItem.astro";
 import { getCollection } from 'astro:content';
+import Paginacion from "./Paginacion";
 
 
 
 const posts = await getCollection("libros")
+const postsPerPage = 3;
 ---
 
 <div class="bg-white w-full h-[80vh] lg:max-w-container lg:h-auto py-10 m-auto grid place-items-center overflow-hidden p-4 lg:pb-32">
@@ -18,5 +20,8 @@ const posts = await getCollection("libros")
           ))
         }
     </div>
-    <button class="mt-10 text-center uppercase px-8 py-2 bg-green-900 text-[30px] text-white rounded-[50px]" type="button">Leer más</button>
+    <div >
+      <Paginacion client:only="react" posts={posts} postsPerPage={postsPerPage} />
+    </div>
+    <!-- <button class="mt-10 text-center uppercase px-8 py-2 bg-green-900 text-[30px] text-white rounded-[50px]" type="button">Leer más</button> -->
 </div>

@@ -59,7 +59,7 @@ const Card = ({ card }: { card: CardType }) => {
         <div className="col-span-3 lg:pl-10 gap-0">
           <motion.p
             style={{ x: title1X }}
-            className="text-[75px] lg:text-[150px] lg:leading-[140px] font-normal uppercase text-black text-center lg:text-left mt-[120%] lg:mt-0 font-cinzel"
+            className="text-[75px] lg:text-[150px] lg:leading-[140px] leading-[80px] font-normal uppercase text-black text-center lg:text-left mt-[120%] lg:mt-0 font-cinzel"
           >
             {card.title1}
           </motion.p>
