@@ -9,14 +9,15 @@ export default {
 				irregardless: ["Irregardless"]
 			},
 			colors: {
-				'dark-blue': '#10151D',
-				'soft-white': 'rgb(191 199 210/1)',
-				'extra-soft-white': 'rgb(46 60 81 / 1)',
-				'soft-light': 'rgb(22 30 41 / 1)',
+				'verde-claro': '#bbd1d5',
+				'verde-medio': '#698084',
+				'verde-oscuro': '#064f5e',
+				'verde-dark': '#002b37',
+				'marron-claro': '#767573',
+				'marron-oscuro': '#303030'
 			  },
 			  maxWidth: {
-				'content-size': '729.44px',
-				'article-size': '1028px',
+				'container': '85vw',
 			  },
 		},
 	},

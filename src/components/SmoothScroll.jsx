@@ -6,15 +6,13 @@ function SmoothScroll({ children }) {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
 
       const locomotiveScroll = new LocomotiveScroll({
-        // Configuración de Locomotive Scroll
-        smooth: true,
-        // Función para forzar que la página se cargue desde la parte superior
+  
+        direction: 'horizontal',
         getDirection: function () {
           return "up";
         },
       });
 
-      // Desplazar la página hacia arriba después de 500ms
       setTimeout(() => {
         window.scrollTo(0, 0);
       }, 100);

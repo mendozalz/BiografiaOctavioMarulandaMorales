@@ -1,7 +1,8 @@
 import { motion, useTransform, useScroll } from "framer-motion";
+
 import { useRef } from "react";
 
-const Example = () => {
+const Carousel = () => {
   return (
     <div className="bg-white ">
       <HorizontalScrollCarousel />
@@ -31,10 +32,21 @@ const HorizontalScrollCarousel = () => {
 };
 
 const Card = ({ card }: { card: CardType }) => {
+  const parallaxRef = useRef<HTMLDivElement | null>(null);
+
+  const {scrollYProgress} = useScroll({
+    target: parallaxRef,
+    offset: ["start start", "end start"],
+  });
+  const title1X = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const title2X = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
+  const title3X = useTransform(scrollYProgress, [0, 1], ["0%", "80%"]);
   return (
     <div
       key={card.id}
       className="group relative h-[100vh] lg:h-[92vh] w-[100vw] overflow-hidden bg-white"
+      data-scroll-section
+      ref={parallaxRef}
     >
       <div
         style={{
@@ -45,27 +57,30 @@ const Card = ({ card }: { card: CardType }) => {
       ></div>
       <div className="absolute inset-0 z-10 grid grid-cols-1 lg:grid-cols-6 place-content-center">
         <div className="col-span-3 lg:pl-10 gap-0">
-          <p className="text-[75px] lg:text-[150px] lg:leading-[140px] font-normal uppercase text-black text-center lg:text-left mt-[120%] lg:mt-0 font-cinzel">
+          <motion.p
+            style={{ x: title1X }}
+            className="text-[75px] lg:text-[150px] lg:leading-[140px] font-normal uppercase text-black text-center lg:text-left mt-[120%] lg:mt-0 font-cinzel"
+          >
             {card.title1}
-          </p>
-          <p className="lg:pl-4 lg:text-[115px] text-[32px] lg:leading-[100px] leading-[5px] font-normal text-black lg:text-left text-center font-irregardless tracking-[10px]">
+          </motion.p>
+          <motion.p  style={{ x: title2X }} className="lg:pl-4 lg:text-[115px] text-[32px] lg:leading-[100px] leading-[5px] font-normal text-black lg:text-left text-center font-irregardless tracking-[10px]">
             {card.title2}
-          </p>
-          <p className="lg:pl-4 lg:leading-[32px] text-[18px] lg:text-[30px] font-normal text-black lg:text-left text-center font-cinzel mt-8 lg:mt-14">
+          </motion.p>
+          <p  className="lg:pl-4 lg:leading-[32px] text-[18px] lg:text-[30px] font-normal text-black lg:text-left text-center font-cinzel mt-8 lg:mt-14">
             {card.parrafo}
           </p>
-          <div className="text-center lg:text-left">
+          <motion.div style={{ x: title3X}} className="text-center lg:text-left">
             <button className="bg-green-200 px-8 py-2 rounded-3xl text-[20px] uppercase mt-4">
               Leer más
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Example;
+export default Carousel;
 
 type CardType = {
   url: string;
@@ -95,28 +110,4 @@ const cards: CardType[] = [
     title2: "Marunlanda Morales",
     id: 3,
   },
-  /* {
-    url: "/temporal/OMM_solo-Photoroom.png",
-    title1: "Octavio",
-    title2: "Marunlanda Morales",
-    id: 4,
-  },
-  {
-    url: "/temporal/OMM_solo-Photoroom.png",
-    title1: "Octavio",
-    title2: "Marunlanda Morales",
-    id: 5,
-  },
-  {
-    url: "/temporal/OMM_solo-Photoroom.png",
-    title1: "Octavio",
-    title2: "Marunlanda Morales",
-    id: 6,
-  },
-  {
-    url: "/temporal/OMM_solo-Photoroom.png",
-    title1: "Octavio",
-    title2: "Marunlanda Morales",
-    id: 7,
-  }, */
 ];
