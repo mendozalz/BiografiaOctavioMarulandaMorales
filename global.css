@@ -4,22 +4,22 @@
 
 @font-face {
   font-family: "Poppins";
-  src: url("./fonts/Poppins/Poppins-Regular.ttf");
+  src: url("/public/fonts/Poppins/Poppins-Regular.ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Cinzel";
-  src: url("./fonts/Cinzel/Cinzel-Black.otf");
+  src: url("/public/fonts/Cinzel/Cinzel-Black.otf");
   font-weight: 800;
 }
 @font-face {
   font-family: "Cinzel";
-  src: url("./fonts/Cinzel/Cinzel-Bold.otf");
+  src: url("/public/fonts/Cinzel/Cinzel-Bold.otf");
   font-weight: 900;
 }
 @font-face {
   font-family: "Cinzel";
-  src: url("./fonts/Cinzel/Cinzel-Regular.otf");
+  src: url("/public/fonts/Cinzel/Cinzel-Regular.otf");
   font-weight: 400;
 }
 
