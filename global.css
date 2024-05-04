@@ -33,13 +33,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins";
 }
 
 :root {
   --accent: #ffffff;
 }
 html {
-  font-family: "Poppins";
   background: var(--accent);
 }
 
