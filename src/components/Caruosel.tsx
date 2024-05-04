@@ -63,7 +63,7 @@ const Card = ({ card }: { card: CardType }) => {
           >
             {card.title1}
           </motion.p>
-          <motion.p  style={{ x: title2X }} className="lg:pl-4 lg:text-[115px] text-[32px] lg:leading-[100px] leading-[5px] font-normal text-black lg:text-left text-center font-irregardless tracking-[10px]">
+          <motion.p  style={{ x: title2X }} className="lg:pl-4 lg:text-[115px] text-[32px] lg:leading-[100px] leading-[30px] font-normal text-black lg:text-left text-center font-irregardless tracking-[10px]">
             {card.title2}
           </motion.p>
           <p  className="lg:pl-4 lg:leading-[32px] text-[18px] lg:text-[30px] font-normal text-black lg:text-left text-center font-cinzel mt-8 lg:mt-14">
