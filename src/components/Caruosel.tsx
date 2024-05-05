@@ -52,6 +52,7 @@ const Card = ({ card }: { card: CardType }) => {
         style={{
           backgroundImage: `url(${card.url})`,
           backgroundRepeat: "no-repeat",
+          backgroundSize: "cover"
         }}
         className="absolute inset-0 z-0 transition-transform duration-300 lg:bg-center lg:mt-0 lg:bg-contain bg-[length:750px_450px] bg-right -mt-[60%]"
       ></div>
@@ -93,7 +94,7 @@ type CardType = {
 
 const cards: CardType[] = [
   {
-    url: "/temporal/OMM_solo-Photoroom.png",
+    url: "public/fotos_octavio/Ocatvio_foto_17.jpg",
     title1: "Octavio",
     title2: "Marunlanda Morales",
     parrafo: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío.",
@@ -101,7 +102,7 @@ const cards: CardType[] = [
     verMas: "/biografia"
   },
   {
-    url: "/temporal/OMM_solo-Photoroom.png",
+    url: "public/fotos_octavio/Ocatvio_foto_16.jpg",
     title1: "Octavio",
     title2: "Marunlanda Morales",
     id: 2,

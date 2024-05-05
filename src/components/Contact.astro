@@ -1,0 +1,89 @@
+---
+import EfectoContacto from "./EfectoContacto.astro";
+---
+
+<div class="w-full h-full mt-[5%] py-10">
+  <div class="lg:max-w-[85vw] 2xl:max-w-[65vw] m-auto relative">
+    <div class="relative flex flex-col items-center md:flex-row">
+      <div class="row items-center py-5 md:pr-16 md:w-4/12 md:py-10">
+        <div class="text-center md:text-left space-y-3 bg-lime">
+          <h2 class="text-4xl font-medium leading-none sm:text-6xl text-black">
+            Contactanos
+          </h2>
+        </div>
+      </div>
+      <div class="flex items-center py-5 md:w-8/12 md:py-10">
+        <p class="text-xl font-normal leading-7 text-center md:text-left">
+          Conéctese con nosotros y las obras de Octavio Marulandaa Morales
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="relative flex flex-col items-center md:flex-row my-6 bg-zinc-100 lg:rounded-[45px] overflow-hidden"
+    >
+    <div class="row items-center py-12 px-4 md:px-20 md:w-8/12 md:py-10">
+      <form action="#" class="space-y-8 md:w-full">
+          <div>
+            <label
+              for="email"
+              class="block mb-2 text-base font-medium text-black">Nombre</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="relative z-10 shadow-sm bg-white border text-black text-base rounded-lg focus:ring-black focus:border-black block w-full p-2.5"
+              placeholder="Nombre"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="subject"
+              class="block mb-2 text-base font-medium text-black">Email</label
+            >
+            <input
+              type="text"
+              id="subject"
+              class="relative z-10 block p-3 w-full text-base text-black bg-white rounded-lg border shadow-sm focus:ring-black focus:border-black"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="sm:col-span-2">
+            <label
+              for="message"
+              class="block mb-2 text-base font-medium text-black dark:text-gray-400"
+              >Mensaje</label
+            >
+            <textarea
+              id="message"
+              rows="6"
+              class="relative z-10 block p-2.5 w-full text-base text-black bg-white rounded-lg shadow-sm border focus:ring-black focus:border-black"
+              placeholder="Mensaje"></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full py-5 bg-zinc-900 rounded-[14px] justify-center gap-2.5 inline-flex"
+          >
+            <div class="text-center text-white text-xl font-normal leading-7">
+              Enviar mensaje
+            </div>
+          </button>
+        </form>
+      </div>
+      <div
+        class="hidden md:grid md:justify-items-end md:w-4/12 md:py-2 absolute lg:-right-[20%] 2xl:-right-[19%] -rotate-90"
+        style="width:585px"
+      >
+        <img
+          class="top-[50%] right-0 opacity-15"
+          src="public/img/logo octavio-04.png"
+          alt="c"
+          width="280%"
+        />
+      </div>
+      <EfectoContacto />
+    </div>
+  </div>
+</div>

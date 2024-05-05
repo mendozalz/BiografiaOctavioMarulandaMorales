@@ -7,9 +7,10 @@ interface Props {
   rango?: [number, number] | any;
   parrafo?: string;
   palabras?: string;
+  textAlign?: string
 }
 
-const ParrafoAnimado: React.FC<Props> = ({ parrafo }) => {
+const ParrafoAnimado: React.FC<Props> = ({ parrafo, textAlign }) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -18,7 +19,7 @@ const ParrafoAnimado: React.FC<Props> = ({ parrafo }) => {
   const palabras = parrafo!.split(" ");
 
   return (
-    <p ref={container} className="parrafosAnimados">
+    <p ref={container} className={`parrafosAnimados m-auto`}>
       {palabras.map((palabra, i) => {
         const start = i / palabras.length; 
         const end = start + (1 / palabras.length); 
