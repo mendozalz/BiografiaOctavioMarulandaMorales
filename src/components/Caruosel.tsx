@@ -1,4 +1,5 @@
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll, delay } from "framer-motion";
+import { stagger } from "framer-motion/dom";
 
 import { useRef } from "react";
 
@@ -34,13 +35,22 @@ const HorizontalScrollCarousel = () => {
 const Card = ({ card }: { card: CardType }) => {
   const parallaxRef = useRef<HTMLDivElement | null>(null);
 
-  const {scrollYProgress} = useScroll({
+  const { scrollYProgress } = useScroll({
     target: parallaxRef,
     offset: ["start start", "end start"],
   });
   const title1X = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const title2X = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
   const title3X = useTransform(scrollYProgress, [0, 1], ["0%", "80%"]);
+
+  const variante = {
+    inicio: { opacity: 0, y: 50 },
+    fin: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, delay: 3.5, staggerChildren:  0.2 },
+    },
+  };
   return (
     <div
       key={card.id}
@@ -52,30 +62,51 @@ const Card = ({ card }: { card: CardType }) => {
         style={{
           backgroundImage: `url(${card.url})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "cover"
+          backgroundSize: "cover",
         }}
         className="absolute inset-0 z-0 transition-transform duration-300 lg:bg-center lg:mt-0 lg:bg-contain bg-[length:750px_450px] bg-right -mt-[60%]"
       ></div>
       <div className="absolute inset-0 z-10 grid grid-cols-1 lg:grid-cols-6 place-content-center">
-        <div className="col-span-3 lg:pl-10 gap-0">
+        <motion.div
+          variants={variante}
+          initial="inicio"
+          animate="fin"
+          className="col-span-3 lg:pl-10 gap-0"
+        >
           <motion.p
+            variants={variante}
+            layout
             style={{ x: title1X }}
             className="text-[75px] lg:text-[150px] lg:leading-[140px] leading-[80px] font-normal uppercase text-black text-center lg:text-left mt-[120%] lg:mt-0 font-cinzel"
           >
             {card.title1}
           </motion.p>
-          <motion.p  style={{ x: title2X }} className="lg:pl-4 lg:text-[115px] text-[32px] lg:leading-[100px] leading-[30px] font-normal text-black lg:text-left text-center font-irregardless tracking-[10px]">
+          <motion.p
+            variants={variante}
+            layout
+            style={{ x: title2X }}
+            className="lg:pl-4 lg:text-[115px] text-[32px] lg:leading-[100px] leading-[30px] font-normal text-black lg:text-left text-center font-irregardless tracking-[10px]"
+          >
             {card.title2}
           </motion.p>
-          <p  className="lg:pl-4 lg:leading-[32px] text-[18px] lg:text-[30px] font-normal text-black lg:text-left text-center font-cinzel mt-8 lg:mt-14">
+          <motion.p
+            variants={variante}
+            layout
+            className="lg:pl-4 lg:leading-[32px] text-[18px] lg:text-[30px] font-normal text-black lg:text-left text-center font-cinzel mt-8 lg:mt-14"
+          >
             {card.parrafo}
-          </p>
-          <motion.div style={{ x: title3X}} className="text-center lg:text-left">
+          </motion.p>
+          <motion.div
+            variants={variante}
+            layout
+            style={{ x: title3X }}
+            className="text-center lg:text-left"
+          >
             <button className="bg-verde-oscuro text-white px-8 py-2 rounded-3xl text-[20px] uppercase mt-4">
               <a href={card.verMas}>Leer más</a>
             </button>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
@@ -89,7 +120,7 @@ type CardType = {
   title2: string;
   parrafo?: string;
   id: number;
-  verMas: string
+  verMas: string;
 };
 
 const cards: CardType[] = [
@@ -99,20 +130,20 @@ const cards: CardType[] = [
     title2: "Marunlanda Morales",
     parrafo: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío.",
     id: 1,
-    verMas: "/biografia"
+    verMas: "/biografia",
   },
   {
     url: "/fotos_octavio/Ocatvio_foto_16.jpg",
     title1: "Octavio",
     title2: "Marunlanda Morales",
     id: 2,
-    verMas: "/biografia"
+    verMas: "/biografia",
   },
   {
     url: "/temporal/OMM_solo-Photoroom.png",
     title1: "Octavio",
     title2: "Marunlanda Morales",
     id: 3,
-    verMas: "/biografia"
+    verMas: "/biografia",
   },
 ];

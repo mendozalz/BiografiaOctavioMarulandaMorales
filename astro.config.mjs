@@ -7,5 +7,5 @@ import fontPicker from "astro-font-picker";
 // https://astro.build/config
 export default defineConfig({
   site: "http://localhost:4321",
-  integrations: [tailwind(), react(), fontPicker()]
+  integrations: [tailwind(), react(), fontPicker()],
 });

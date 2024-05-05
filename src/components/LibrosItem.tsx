@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { motion } from "framer-motion";
 
 interface Post {
   id: string;
@@ -25,7 +25,12 @@ const LibrosItem: React.FC<Props> = ({ post }) => {
   
 
   return (
-    <div className="libros-item mt-8">
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 1 }}
+    layout
+     className="libros-item mt-8">
       <div
         className=" relative h-auto sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-4 lg:flex lg:items-center"
       >
@@ -40,7 +45,7 @@ const LibrosItem: React.FC<Props> = ({ post }) => {
           </div>
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

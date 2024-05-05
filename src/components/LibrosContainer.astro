@@ -10,15 +10,6 @@ const posts = await getCollection("libros");
   id="libros"
   class="bg-white w-full h-auto lg:max-w-container lg:h-auto py-10 m-auto grid place-items-center overflow-hidden p-1 lg:pb-10"
 >
-  <h1
-    class="uppecase text-[32px] lg:text-[60px] text-verde-dark text-center font-bold"
-  >
-    Libros y Documentos
-  </h1>
-  <p class="text-center w-full lg:max-w-[40vw] m-auto">
-    Eiusmod adipisicing nostrud voluptate ipsum eu qui enim aute cupidatat ea
-    magna. Laborum ipsum reprehenderit cupidatat incididunt velit minim
-    consectetur.
-  </p>
+  
   <EncapsulamientoLibros posts={posts} client:only="react"/>
 </div>

@@ -6,7 +6,6 @@ import "../../global.css";
 import Footer from "@/components/Footer.astro";
 import ZoomParallax from "@/components/ZoomParallax";
 import ParrafoAnimado from "@/components/ParrafoAnimado";
-import Intro from "@/components/Intro";
 
 const parrafo =
   "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
@@ -16,7 +15,6 @@ const parrafo2 =
 ---
 
 <Layout title="Octavio Marulanda Morales">
-  <Intro client:only/>
   <Carousel client:load />
   <LibrosContainer />
   <ZoomParallax client:load />
