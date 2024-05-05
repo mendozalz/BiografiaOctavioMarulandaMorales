@@ -94,7 +94,7 @@ type CardType = {
 
 const cards: CardType[] = [
   {
-    url: "public/fotos_octavio/Ocatvio_foto_17.jpg",
+    url: "/fotos_octavio/Ocatvio_foto_17.jpg",
     title1: "Octavio",
     title2: "Marunlanda Morales",
     parrafo: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío.",
@@ -102,7 +102,7 @@ const cards: CardType[] = [
     verMas: "/biografia"
   },
   {
-    url: "public/fotos_octavio/Ocatvio_foto_16.jpg",
+    url: "/fotos_octavio/Ocatvio_foto_16.jpg",
     title1: "Octavio",
     title2: "Marunlanda Morales",
     id: 2,
