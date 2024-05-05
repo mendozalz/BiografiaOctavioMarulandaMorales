@@ -26,8 +26,8 @@ const { slug, title, heroImg, description, pubDate, category, autor, bio, descar
     <div class="lg:max-w-[85vw] m-auto">
       <div>
         <a
-          class="text-black inline-flex cursor-pointer items-center gap-2 self-start rounded-full border px-6 py-2 transition-colors duration-200 hover:border-black/70"
-          href="/"
+          class="text-black inline-flex cursor-pointer items-center gap-2 self-start rounded-full border px-6 py-2 transition-colors duration-200 hover:border-verde-dark text-verde-oscuro"
+          href="/#libros"
         >
           <svg
             viewBox="0 -960 960 960"
@@ -37,7 +37,7 @@ const { slug, title, heroImg, description, pubDate, category, autor, bio, descar
             ><path
               class=""
               d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"
-              fill="#000000"></path></svg
+              fill="#698084"></path></svg
           >
           Volver
         </a>
@@ -53,11 +53,11 @@ const { slug, title, heroImg, description, pubDate, category, autor, bio, descar
           <div class="categoria-fecha-movil flex lg:hidden justify-between items-center gap-4 w-full h-20">
             <div>
               <span
-                class="border-green-700 border-2 text-green-700 font-medium rounded-3xl px-4 py-2 text-base"
+                class="border-verde-medio border-2 text-verde-oscuro font-medium rounded-3xl px-4 py-2 text-base"
                 >{category}</span
               >
             </div>
-            <time class="text-[20px] font-bold" datetime={pubDate.toString()}>{pubDate}</time>
+            <time class="text-[20px] font-bold text-verde-oscuro" datetime={pubDate.toString()}>{pubDate}</time>
           </div>
           <div class="w-full m-auto lg:max-w-[85vw]">
             <!-- Heo Single Post -->
@@ -79,11 +79,11 @@ const { slug, title, heroImg, description, pubDate, category, autor, bio, descar
           <div class="categoria-fecha-pc hidden lg:flex justify-start items-center gap-4 w-full h-20">
             <div>
               <span
-                class="border-green-700 border-2 text-green-700 font-medium rounded-3xl px-4 py-2 text-base"
+                class="border-verde-medio text-verde-oscuro border-2 text-verdeborder-verde-oscuro font-medium rounded-3xl px-4 py-2 text-base"
                 >{category}</span
               >
             </div>
-            <time class="text-[20px] font-bold" datetime={pubDate.toString()}>{pubDate}</time>
+            <time class="text-[20px] font-bold text-verde-oscuro" datetime={pubDate.toString()}>{pubDate}</time>
           </div>
         </div>
       </div>

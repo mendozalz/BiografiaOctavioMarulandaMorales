@@ -13,9 +13,15 @@ function SmoothScroll({ children }) {
         },
       });
 
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-      }, 100);
+      const currentUrl = window.location.href;
+      const targetUrl = 'http://localhost:4321/libros/';
+
+      if (currentUrl.includes(targetUrl)) {
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+        }, 100);
+      }
+    
     };
 
     initializeSmoothScroll();

@@ -1,4 +1,3 @@
-import LibrosItem from "@/components/LibrosItem.astro";
 import { defineCollection, z } from "astro:content";
 
 const libros = defineCollection({

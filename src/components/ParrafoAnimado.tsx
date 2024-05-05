@@ -20,8 +20,8 @@ const ParrafoAnimado: React.FC<Props> = ({ parrafo }) => {
   return (
     <p ref={container} className="parrafosAnimados">
       {palabras.map((palabra, i) => {
-        const start = i / palabras.length; // Cambio aquí
-        const end = start + (1 / palabras.length); // Cambio aquí
+        const start = i / palabras.length; 
+        const end = start + (1 / palabras.length); 
         return (
           <Palabras key={i} progreso={scrollYProgress} rango={[start, end]}>
             {palabra}

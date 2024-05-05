@@ -22,6 +22,7 @@
     "astro-font-picker": "^0.2.1",
     "framer-motion": "^11.1.7",
     "locomotive-scroll": "^5.0.0-beta.12",
+    "nanostores": "^0.10.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.3",

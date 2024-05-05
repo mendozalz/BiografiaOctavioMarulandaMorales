@@ -37,7 +37,12 @@
 }
 
 :root {
-  --accent: #ffffff;
+  --verde-claro: #bbd1d5;
+  --verde-medio: #698084;
+  --verde-oscuro: #064f5e;
+  --verde-dark: #002b37;
+  --marron-claro: #767573;
+  --marron-oscuro: #303030;
 }
 html {
   background: var(--accent);
@@ -147,7 +152,7 @@ html {
   & .menuMovil {
     width: 100%;
     max-height: 400px;
-    background-color: #14532d;
+    background-color: var(--verde-oscuro);
     border-radius: 25px;
     position: relative;
     overflow: hidden;
@@ -185,7 +190,7 @@ html {
 .sliderMenu .elMenu {
   width: 100%;
   height: 100%;
-  background-color: #14532d;
+  background-color: var(--verde-oscuro);
 }
 
 .sliderMenu .elMenu p {
@@ -198,7 +203,7 @@ html {
 }
 
 .sliderMenu .elMenu:nth-of-type(2) p {
-  color: #c9fd74;
+  color: var(--verde-oscuro);
 }
 
 .sliderMenu .elMenu:hover .perspectiveText {
@@ -422,7 +427,7 @@ html {
         left: 13vw;
         width: 35vw;
         height: 30vh;
-        clip-path: polygon(0 0, 100% 0, 100% 110%, 0 110%) !important;
+        clip-path: polygon(0 0, 100% 0, 100% 77%, 0 77%) !important;
         z-index: -1 !important;
       }
     }
@@ -466,11 +471,11 @@ html {
     }
     &:nth-of-type(7) {
       .zoomImageContainer {
-        top: 30.5vh !important;
-        left: 30vw !important;
+        top: 35vh !important;
+        left: -30vw !important;
         width: 40vw !important;
         height: 14vh !important;
-        clip-path: polygon(20% 20%, 100% 20%, 100% 130%, 20% 130%);
+        clip-path: polygon(0% 18%, 100% 20%, 100% 130%, 0% 130%);
       }
     }
   }

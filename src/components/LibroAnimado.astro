@@ -49,6 +49,15 @@ const {heroImg, descargar} = Astro.props
 
 <style>
 
+:root {
+  --verde-claro: #bbd1d5;
+  --verde-medio: #698084;
+  --verde-oscuro: #064f5e;
+  --verde-dark: #002b37;
+  --marron-claro: #767573;
+  --marron-oscuro: #303030;
+}
+
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 * {
@@ -69,14 +78,14 @@ ul {
 }
 
 a {
-	color: #2c3e50;
+	color: var();
 	text-decoration: none;
 }
 
 .btn {
 	display: inline-block;
 	text-transform: uppercase;
-	border: 2px solid #2c3e50;
+	border: 2px solid var(--verde-dark);
 	margin-top: 100px; 
 	font-size: 0.7em;
 	font-weight: 700;
@@ -88,8 +97,8 @@ a {
 }
 
 .btn:hover {
-	border-color: #16a085;
-	color: #16a085;
+	border-color: var(--verde-medio);
+	color: var(--verde-medio);
 }
 
 /* basic grid, only for this demo */

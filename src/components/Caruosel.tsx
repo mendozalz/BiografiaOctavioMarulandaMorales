@@ -70,7 +70,7 @@ const Card = ({ card }: { card: CardType }) => {
             {card.parrafo}
           </p>
           <motion.div style={{ x: title3X}} className="text-center lg:text-left">
-            <button className="bg-green-200 px-8 py-2 rounded-3xl text-[20px] uppercase mt-4">
+            <button className="bg-verde-oscuro text-white px-8 py-2 rounded-3xl text-[20px] uppercase mt-4">
               Leer más
             </button>
           </motion.div>

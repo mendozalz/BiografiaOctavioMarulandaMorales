@@ -1,27 +1,24 @@
 ---
-import LibrosItem from "./LibrosItem.astro";
-import { getCollection } from 'astro:content';
-import Paginacion from "./Paginacion";
+import { getCollection } from "astro:content";
+import EncapsulamientoLibros from "./EncapsulamientoLibros";
 
+const posts = await getCollection("libros");
 
-
-const posts = await getCollection("libros")
-const postsPerPage = 3;
 ---
 
-<div class="bg-white w-full h-[80vh] lg:max-w-container lg:h-auto py-10 m-auto grid place-items-center overflow-hidden p-4 lg:pb-32">
-
-    <h1 class="uppecase text-[32px] lg:text-[60px] text-green-900 text-center font-bold">Libros y Documentos</h1>
-    <p class="text-center w-full lg:max-w-[40vw] m-auto">Eiusmod adipisicing nostrud voluptate ipsum eu qui enim aute cupidatat ea magna. Laborum ipsum reprehenderit cupidatat incididunt velit minim consectetur.</p>
-    <div class="w-full h-auto grid grid-cols-3 place-items-center lg:mt-20">
-        {
-          posts.map(post=>(
-          <LibrosItem slug={post.slug} title={post.data.title} heroImg={post.data.heroImg} description={post.data.description} pubDate={post.data.pubDate} category={post.data.category}/>
-          ))
-        }
-    </div>
-    <div >
-      <Paginacion client:only="react" posts={posts} postsPerPage={postsPerPage} />
-    </div>
-    <!-- <button class="mt-10 text-center uppercase px-8 py-2 bg-green-900 text-[30px] text-white rounded-[50px]" type="button">Leer más</button> -->
+<div
+  id="libros"
+  class="bg-white w-full h-auto lg:max-w-container lg:h-auto py-10 m-auto grid place-items-center overflow-hidden p-1 lg:pb-10"
+>
+  <h1
+    class="uppecase text-[32px] lg:text-[60px] text-verde-dark text-center font-bold"
+  >
+    Libros y Documentos
+  </h1>
+  <p class="text-center w-full lg:max-w-[40vw] m-auto">
+    Eiusmod adipisicing nostrud voluptate ipsum eu qui enim aute cupidatat ea
+    magna. Laborum ipsum reprehenderit cupidatat incididunt velit minim
+    consectetur.
+  </p>
+  <EncapsulamientoLibros posts={posts} client:only="react"/>
 </div>
