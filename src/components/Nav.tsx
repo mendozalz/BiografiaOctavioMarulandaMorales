@@ -27,9 +27,10 @@ const Nav = () => {
       <div className="lg:max-w-[85vw] w-full flex justify-between items-center">
           <div className="contenedor-logo"><a className="cursor-pointer" href="/"><img className="w-auto h-[75px] lg:h-[100px] mr-auto py-1 lg:p-2" src="/img/logo octavio-04.png" alt="logo tipo de la silueta de Octavio Marulanda" /></a></div>
           <ul className="list-none lg:flex items-center gap-6 hidden">
-            <li className="uppercase" >Home</li>
-            <li className="uppercase" >Biografia</li>
-            <li className="uppercase">Contact Us</li>
+            <li className="uppercase" ><a href="/">Home</a></li>
+            <li className="uppercase" ><a href="/biografia">Biografia</a></li>
+            <li className="uppercase" ><a href="/galeria">Galeria</a></li>
+            <li className="uppercase"><a href="/contacto">Contacto</a></li>
           </ul>
           <NavMovil/>
       </div>

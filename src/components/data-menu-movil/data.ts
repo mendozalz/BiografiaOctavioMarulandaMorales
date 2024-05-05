@@ -5,11 +5,15 @@ export const links = [
     },
     {
         title: "Biografia",
-        href: "#"
+        href: "/biografia"
     },
     {
-        title: "Contact Us",
-        href: "#"
+        title: "Galeria",
+        href: "/galeria"
+    },
+    {
+        title: "Contacto",
+        href: "/contacto"
     },
 
 ]

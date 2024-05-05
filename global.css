@@ -490,10 +490,10 @@ html {
       position: relative;
       margin-right: 5px;
       margin-top: 8px;
-      & .sombra {
+      /* & .sombra {
         position: absolute;
         opacity: 20%;
-      }
+      } */
     }
   }
 }

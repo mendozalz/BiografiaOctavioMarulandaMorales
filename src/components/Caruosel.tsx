@@ -71,7 +71,7 @@ const Card = ({ card }: { card: CardType }) => {
           </p>
           <motion.div style={{ x: title3X}} className="text-center lg:text-left">
             <button className="bg-verde-oscuro text-white px-8 py-2 rounded-3xl text-[20px] uppercase mt-4">
-              Leer más
+              <a href={card.verMas}>Leer más</a>
             </button>
           </motion.div>
         </div>
@@ -88,6 +88,7 @@ type CardType = {
   title2: string;
   parrafo?: string;
   id: number;
+  verMas: string
 };
 
 const cards: CardType[] = [
@@ -97,17 +98,20 @@ const cards: CardType[] = [
     title2: "Marunlanda Morales",
     parrafo: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío.",
     id: 1,
+    verMas: "/biografia"
   },
   {
     url: "/temporal/OMM_solo-Photoroom.png",
     title1: "Octavio",
     title2: "Marunlanda Morales",
     id: 2,
+    verMas: "/biografia"
   },
   {
     url: "/temporal/OMM_solo-Photoroom.png",
     title1: "Octavio",
     title2: "Marunlanda Morales",
     id: 3,
+    verMas: "/biografia"
   },
 ];
