@@ -1,6 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Carousel from "@/components/Caruosel.tsx";
+import Carousel from "@/components/Caruosel";
 import LibrosContainer from "../components/LibrosContainer.astro";
 import "../../global.css";
 import Footer from "@/components/Footer.astro";
@@ -15,7 +15,7 @@ const parrafo2 =
 ---
 
 <Layout title="Octavio Marulanda Morales">
-  <Carousel client:load />
+  <Carousel client:load/>
   <LibrosContainer />
   <ZoomParallax client:load />
   <div style={{ paddingTop: "15px" }}></div>

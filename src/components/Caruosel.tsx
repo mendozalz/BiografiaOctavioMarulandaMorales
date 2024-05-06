@@ -48,7 +48,7 @@ const Card = ({ card }: { card: CardType }) => {
     fin: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, delay: 3.5, staggerChildren:  0.2 },
+      transition: { duration: 0.5, delay: .5, staggerChildren:  0.2 },
     },
   };
   return (

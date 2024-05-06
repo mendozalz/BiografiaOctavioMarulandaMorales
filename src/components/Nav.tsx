@@ -12,7 +12,7 @@ const Nav = () => {
 
   return (
     <motion.div
-      className="navigation w-full h-28  fixed top-0 right-0 left-0 z-15  text-gray-900 flex items-center justify-between px-6 py-2 font-semibold text-sm z-10"
+      className="navigation w-full h-28  fixed top-0 right-0 left-0 text-gray-900 flex items-center justify-between px-6 py-2 font-semibold text-sm z-20"
       style={{
         background,
         height,

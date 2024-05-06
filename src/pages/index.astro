@@ -1,12 +1,13 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Carousel from "@/components/Caruosel.tsx";
+import Carousel from "@/components/Caruosel";
 import LibrosContainer from "../components/LibrosContainer.astro";
 import "../../global.css";
 import Footer from "@/components/Footer.astro";
 import ZoomParallax from "@/components/ZoomParallax";
 import ParrafoAnimado from "@/components/ParrafoAnimado";
 import Intro from "@/components/Intro";
+import GaleriaComponent from "@/components/GaleriaComponent.astro";
 
 const parrafo =
   "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
@@ -17,7 +18,7 @@ const parrafo2 =
 
 <Layout title="Octavio Marulanda Morales">
   <Intro client:only/>
-  <Carousel client:load />
+  <Carousel client:load/>
   <LibrosContainer />
   <ZoomParallax client:load />
   <div style={{ paddingTop: "15px" }}></div>

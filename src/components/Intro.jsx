@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 
 const Intro = () => {
   const [showIntro, setShowIntro] = useState(true);
 
   useEffect(() => {
-    // Después de 4 segundos, ocultar la introducción
     const timeout = setTimeout(() => {
       setShowIntro(false);
     }, 4000);
 
-    // Limpiar el timeout al desmontar el componente
     return () => clearTimeout(timeout);
   }, []);
 

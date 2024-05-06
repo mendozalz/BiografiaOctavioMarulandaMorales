@@ -1,17 +1,28 @@
 ---
 import EfectoFooter from "./EfectoFooter.astro";
-
 ---
 
-<div class="overflow-hidden">
-    <EfectoFooter/>
-    <div class="footer w-full h-auto lg:max-w-[85vw] m-auto border-t-2">
+<div class="overflow-hidden w-full h-[320px] lg:h-[62vh] 2xl:h-[72vh] border-t-2 relative">
+  <EfectoFooter />
+    <div class="w-full h-auto contendor-footer absolute bottom-0">
+      <div class="footer w-screen lg:max-w-[85vw] m-auto">
         <div class="w-full h-auto text-center">
-            <h2 class="leading-[70px]">© 2024 Todos los derechos reservados</h2>
-            <p class="lg:w-[50%] w-[80%] h-auto m-auto text-[14px] lg:text-base mb-10">Esta web representa la vida y obra del ilustre Octavio Marulanda Morales. Diseñado y contruido por <b>Lenin Mendoza</b> procurando una web accesible.</p>
+          <h2 class="leading-[70px]">© 2024 Todos los derechos reservados</h2>
+          <p
+            class="lg:w-[50%] w-[80%] h-auto m-auto text-[14px] lg:text-base mb-10"
+          >
+            Esta web representa la vida y obra del ilustre Octavio Marulanda
+            Morales. Diseñado y contruido por <b>Lenin Mendoza</b> procurando una web
+            accesible.
+          </p>
         </div>
-        <div class=" w-full h-auto footer-imagen">
-            <img class="imagen-footer m-auto" src="/img/logo octavio-footer.png" alt="Imagen del nombre de Octavio Marulanda Morales" />
+        <div class="w-full h-auto footer-imagen">
+          <img
+            class="imagen-footer m-auto"
+            src="/img/logo octavio-footer.png"
+            alt="Imagen del nombre de Octavio Marulanda Morales"
+          />
         </div>
-    </div>
+      </div>
+  </div>
 </div>
