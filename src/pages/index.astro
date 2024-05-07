@@ -10,10 +10,22 @@ import Intro from "@/components/Intro";
 import GaleriaComponent from "@/components/GaleriaComponent.astro";
 
 const parrafo =
-  "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+  "Octavio Marulanda Morales fue un destacado promotor cultural colombiano, nacido el 7 de octubre de 1921 en Manizales. Desde temprana edad mostró interés por la música, influenciado por la radiola de su padre. Durante su juventud, enfrentó desafíos familiares, como el traslado de su madre a un psiquiátrico en Bogotá.";
 
 const parrafo2 =
-  "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.";
+  "En 1944, contrajo matrimonio con Berenice Arbeláez y se trasladó a Cali, donde inició su carrera en la emisora Electra Cultural. Su pasión por la cultura lo llevó a fundar la primera escuela de teatro del país, Artistas del Pueblo, en 1952, además de crear el periódico Páginas Culturales.";
+
+  const parrafo3 =
+  'Marulanda Morales alcanzó reconocimiento internacional con la obra teatral "A la diestra de Dios padre", presentada en el Festival de las Naciones en París en 1958. A lo largo de su vida, dirigió diversas instituciones culturales, como el Instituto Popular de Cultura y la Escuela Departamental de Teatro en Bellas Artes de Cali.';
+
+  const parrafo4 =
+  'En 1973, publicó el libro "Folclor y Cultura General" y se involucró en la organización del concurso Mono Núñez. Su labor también se extendió a la promoción de la música colombiana, siendo cofundador de la Fundación de Música de Ginebra en 1976.';
+
+  const parrafo5 =
+  'Durante la década de 1980, se vinculó a Colcultura en Bogotá y publicó varios libros sobre música y cultura colombiana. Además, contribuyó a la creación del Centro de Documentación Musical en Funmusica en 1991.';
+
+  const parrafo6 =
+  'El legado de Octavio Marulanda Morales perdura a través de sus escritos y su incansable trabajo en la promoción de la cultura colombiana. Falleció el 10 de febrero de 1997, dejando un importante legado en el ámbito cultural del país.';
 ---
 
 <Layout title="Octavio Marulanda Morales">
@@ -21,8 +33,12 @@ const parrafo2 =
   <Carousel client:load/>
   <LibrosContainer />
   <ZoomParallax client:load />
-  <div style={{ paddingTop: "15px" }}></div>
+  <div style={{ paddingTop: "50px" }}></div>
   <ParrafoAnimado parrafo={parrafo} client:load />
   <ParrafoAnimado parrafo={parrafo2} client:load />
-  <div style={{ paddingBottom: "35px" }}></div>
+  <ParrafoAnimado parrafo={parrafo3} client:load />
+  <ParrafoAnimado parrafo={parrafo4} client:load />
+  <ParrafoAnimado parrafo={parrafo5} client:load />
+  <ParrafoAnimado parrafo={parrafo6} client:load />
+  <div style={{ paddingBottom: "50px" }}></div>
 </Layout>

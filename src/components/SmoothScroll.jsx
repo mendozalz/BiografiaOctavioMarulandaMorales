@@ -27,7 +27,7 @@ function SmoothScroll({ children }) {
     initializeSmoothScroll();
   }, []);
 
-  return <main>{children}</main>;
+  return <main root options={{ lerp: 0.1, duration: 1.5, smoothWheel: false }}>{children}</main>;
 }
 
 export default SmoothScroll;

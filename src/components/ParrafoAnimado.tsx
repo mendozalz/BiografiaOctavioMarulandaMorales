@@ -10,7 +10,7 @@ interface Props {
   textAlign?: string
 }
 
-const ParrafoAnimado: React.FC<Props> = ({ parrafo, textAlign }) => {
+const ParrafoAnimado: React.FC<Props> = ({ parrafo }) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
