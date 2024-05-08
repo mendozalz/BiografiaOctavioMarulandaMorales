@@ -23,18 +23,6 @@ interface Props {
   posts: Post[];
 }
 
-const librosVariant = {
-  offscreen: {
-    opacity: 0,
-    y: 100,
-  },
-  onscreen: {
-    opacity: 1,
-    y: 0,
-    transition: { delay: .5, staggerChildren: 0.5 },
-  },
-};
-
 const tituloVariant = {
   offscreen: {
     opacity: 0,
@@ -92,17 +80,13 @@ const EncapsulamientoLibros: React.FC<Props> = ({ posts }) => {
         ea magna. Laborum ipsum reprehenderit cupidatat incididunt velit minim
         consectetur.
       </motion.p>
-      <div className="w-full h-auto grid grid-cols-3 place-items-center lg:mt-20">
+      <div  className="w-full h-auto grid grid-cols-3 place-items-center lg:mt-20">
         {postSlice.map((post) => (
-          <motion.div
+          <div
             key={post.id}
-            variants={librosVariant}
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true, amount: 0.2 }}
           >
             <LibrosItem post={post} />
-          </motion.div>
+          </div>
         ))}
       </div>
       {!mostrarLibros && (

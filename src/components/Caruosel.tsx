@@ -92,7 +92,7 @@ const Card = ({ card }: { card: CardType }) => {
           <motion.p
             variants={variante}
             layout
-            className="lg:pl-4 lg:leading-[32px] text-[18px] lg:text-[30px] font-normal text-black lg:text-left text-center font-cinzel mt-8 lg:mt-14"
+            className="lg:pl-4 lg:leading-[100px] text-[18px] lg:text-[100px] font-normal text-black lg:text-left text-center font-cinzel mt-8 lg:mt-4"
           >
             {card.parrafo}
           </motion.p>
@@ -128,22 +128,24 @@ const cards: CardType[] = [
     url: "/fotos_octavio/Ocatvio_foto_17.jpg",
     title1: "Octavio",
     title2: "Marunlanda Morales",
-    parrafo: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío.",
+    parrafo: "Teatro",
     id: 1,
-    verMas: "/biografia",
+    verMas: "/teatro",
   },
   {
-    url: "/fotos_octavio/Ocatvio_foto_16.jpg",
+    url: "/fotos_octavio/Ocatvio_foto_17.jpg",
     title1: "Octavio",
     title2: "Marunlanda Morales",
+    parrafo: "Folclor",
     id: 2,
-    verMas: "/biografia",
+    verMas: "/folclor",
   },
   {
-    url: "/temporal/OMM_solo-Photoroom.png",
+    url: "/fotos_octavio/Ocatvio_foto_17.jpg",
     title1: "Octavio",
     title2: "Marunlanda Morales",
+    parrafo: "Música",
     id: 3,
-    verMas: "/biografia",
+    verMas: "/musica",
   },
 ];
