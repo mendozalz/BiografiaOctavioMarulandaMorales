@@ -14,7 +14,7 @@ const ParrafoAnimado: React.FC<Props> = ({ parrafo }) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start 0.5", "start 0.25"],
+    offset: ["start 0.3", "start 0.30"],
   });
   const palabras = parrafo!.split(" ");
 

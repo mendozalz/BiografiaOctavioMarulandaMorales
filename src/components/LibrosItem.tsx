@@ -44,12 +44,12 @@ const LibrosItem: React.FC<Props> = ({ post }) => {
       <motion.div
       variants={librosVariant}
       layout
-       className="libros-item mt-8">
+       className="libros-item">
         <div
           className=" relative h-auto sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-4 lg:flex lg:items-center"
         >
-          <a className="book-container w-full h-[200px] lg:h-auto" href={`/libros/${post.slug}`}>
-            <div className="book mt-8">
+          <a className="book-container w-full h-[200px] md:h-auto" href={`/libros/${post.slug}`}>
+            <div className="book mt-8 md:mt-0 lg:mt-8">
               <img
                 src={post.data.heroImg}
                 width={300}

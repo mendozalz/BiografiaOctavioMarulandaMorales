@@ -64,7 +64,7 @@ const Card = ({ card }: { card: CardType }) => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        className="absolute inset-0 z-0 transition-transform duration-300 lg:bg-center lg:mt-0 lg:bg-contain bg-[length:750px_450px] bg-right -mt-[60%]"
+        className="absolute inset-0 z-0 transition-transform duration-300 lg:bg-center lg:mt-0 lg:bg-contain bg-[length:750px_450px] mt-[14%] bg-[center_right_22%]"
       ></div>
       <div className="absolute inset-0 z-10 grid grid-cols-1 lg:grid-cols-6 place-content-center">
         <motion.div
@@ -77,7 +77,7 @@ const Card = ({ card }: { card: CardType }) => {
             variants={variante}
             layout
             style={{ x: title1X }}
-            className="text-[75px] lg:text-[150px] lg:leading-[140px] leading-[80px] font-normal uppercase text-black text-center lg:text-left mt-[120%] lg:mt-0 font-cinzel"
+            className="text-[75px] lg:text-[150px] lg:leading-[140px] leading-[80px] font-normal uppercase text-black text-center lg:text-left mt-[100%] md:mt-[60%] lg:mt-0 font-cinzel"
           >
             {card.title1}
           </motion.p>
@@ -89,23 +89,25 @@ const Card = ({ card }: { card: CardType }) => {
           >
             {card.title2}
           </motion.p>
-          <motion.p
-            variants={variante}
-            layout
-            className="lg:pl-4 lg:leading-[100px] text-[18px] lg:text-[100px] font-normal text-black lg:text-left text-center font-cinzel mt-8 lg:mt-4"
-          >
-            {card.parrafo}
-          </motion.p>
-          <motion.div
-            variants={variante}
-            layout
-            style={{ x: title3X }}
-            className="text-center lg:text-left"
-          >
-            <button className="bg-verde-oscuro text-white px-8 py-2 rounded-3xl text-[20px] uppercase mt-4">
-              <a href={card.verMas}>Leer más</a>
-            </button>
-          </motion.div>
+          <div className="w-[319px] h-[144px] flex flex-col justify-between m-auto lg:mt-20 lg:mx-0">
+            <motion.p
+              variants={variante}
+              layout
+              className="text-[60px] leading-normal font-normal text-black text-center uppercase"
+            >
+              {card.parrafo}
+            </motion.p>
+            <motion.div
+              variants={variante}
+              layout
+              style={{ x: title3X }}
+              className="text-center lg:text-left"
+            >
+              <button className="bg-verde-oscuro text-white w-full px-8 py-1 rounded-3xl text-[35px] uppercase">
+                <a href={card.verMas}>Leer más</a>
+              </button>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </div>
@@ -125,7 +127,7 @@ type CardType = {
 
 const cards: CardType[] = [
   {
-    url: "/fotos_octavio/Ocatvio_foto_17.jpg",
+    url: "/fotos_octavio/fondo1.jpg",
     title1: "Octavio",
     title2: "Marunlanda Morales",
     parrafo: "Teatro",
@@ -133,7 +135,7 @@ const cards: CardType[] = [
     verMas: "/teatro",
   },
   {
-    url: "/fotos_octavio/Ocatvio_foto_17.jpg",
+    url: "/fotos_octavio/fondo1_1.jpg",
     title1: "Octavio",
     title2: "Marunlanda Morales",
     parrafo: "Folclor",
@@ -141,7 +143,7 @@ const cards: CardType[] = [
     verMas: "/folclor",
   },
   {
-    url: "/fotos_octavio/Ocatvio_foto_17.jpg",
+    url: "/fotos_octavio/fondo1_2.jpg",
     title1: "Octavio",
     title2: "Marunlanda Morales",
     parrafo: "Música",

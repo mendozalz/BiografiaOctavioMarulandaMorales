@@ -62,13 +62,14 @@ const EncapsulamientoLibros: React.FC<Props> = ({ posts }) => {
 
   return (
     <motion.div
+      className="contenedor-titulo h-auto w-full"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.1 }}
     >
       <motion.h1
         variants={tituloVariant}
-        className="uppecase text-[32px] lg:text-[60px] text-verde-dark text-center font-bold"
+        className="uppecase text-[32px] md:text-[50px] lg:text-[60px] text-verde-dark text-center font-bold"
       >
         Libros y Documentos
       </motion.h1>
@@ -80,7 +81,7 @@ const EncapsulamientoLibros: React.FC<Props> = ({ posts }) => {
         ea magna. Laborum ipsum reprehenderit cupidatat incididunt velit minim
         consectetur.
       </motion.p>
-      <div  className="w-full h-auto grid grid-cols-3 place-items-center lg:mt-20">
+      <div  className="w-full h-auto grid grid-cols-3 place-items-center">
         {postSlice.map((post) => (
           <div
             key={post.id}
@@ -90,11 +91,11 @@ const EncapsulamientoLibros: React.FC<Props> = ({ posts }) => {
         ))}
       </div>
       {!mostrarLibros && (
-        <div className="w-full text-center">
+        <div className="w-full text-center btn-ver-mas">
           <button
             onClick={verMas}
             id="btn"
-            className="mt-10 text-center uppercase px-8 py-2 bg-verde-oscuro text-[18px] lg:text-[30px] text-white rounded-[50px]"
+            className="mt-10 md:mt-0 lg:mt-4 text-center uppercase px-8 py-2 bg-verde-oscuro text-[18px] lg:text-[30px] text-white rounded-[50px]"
             type="button"
           >
             Ver más
