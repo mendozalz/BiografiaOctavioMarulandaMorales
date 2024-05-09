@@ -390,6 +390,28 @@ html {
     }
   }
 }
+
+/* Laptops */
+
+@media only screen and (min-width: 1201px) and (max-width:1600px){
+  /* Efecto Zoom Parallax */
+  .zoomContainer {
+   & .zoomSticky {
+       & .zoomEl {
+           & .zoomImageContainer {
+               img {
+                   -o-object-fit: cover;
+                   object-fit: cover;
+                   filter: blur();
+                   margin-top: 24px !important;
+               }
+           }
+       }
+   }
+}
+ 
+}
+
 /* Tablet Galaxy TAB A8 */
 
 @media only screen and (min-width: 1201px) and (max-width:1350px){
@@ -398,24 +420,7 @@ html {
 }
 }
 
-@media only screen and (min-width: 1201px) and (max-width:1600px){
-   /* Efecto Zoom Parallax */
-   .zoomContainer {
-    & .zoomSticky {
-        & .zoomEl {
-            & .zoomImageContainer {
-                img {
-                    -o-object-fit: cover;
-                    object-fit: cover;
-                    filter: blur();
-                    margin-top: 24px !important;
-                }
-            }
-        }
-    }
-}
-  
-}
+
 
 @media only screen and (min-width: 601px) and (max-width:1200px){
   .book {
