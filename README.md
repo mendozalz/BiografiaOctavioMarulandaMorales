@@ -6,7 +6,7 @@
 
 | Efecto Zoom Parallax y parrafo lector scroll                                                                                <img src="public/readme/zoomParallax.gif" alt="animacion de libros" /> |
 
-Ver en [Vercel](https://biografia-octavio-marulanda-morales.vercel.app/)
+Ver en [Vercel](https://octavio-marulanda-portafolio.vercel.app/)
 
 ## 🚀 Vida y obras de Octavio Marulanda Morales
 
