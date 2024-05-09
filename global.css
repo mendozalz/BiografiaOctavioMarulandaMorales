@@ -390,6 +390,13 @@ html {
     }
   }
 }
+/* Tablet Galaxy TAB A8 */
+
+@media only screen and (min-width: 1201px) and (max-width:1350px){
+  .contenedor-main-footer.overflow-hidden.w-full.h-\[320px\].md\:h-\[40vh\].lg\:h-\[62vh\].\32 xl\:h-\[72vh\].border-t-2.relative {
+    height: 66vh;
+}
+}
 
 @media only screen and (min-width: 601px) and (max-width:1200px){
   .book {

@@ -8,7 +8,7 @@ const Nav = () => {
     [0, 100], 
     ["rgba(255, 255, 255, 1)", "rgba(255, 255, 255, 0)"] 
   );
-  const height = useTransform(scrollY, [0, 100], [100, 80]); 
+  const height = useTransform(scrollY, [0, 100], [80, 70]); 
 
   return (
     <motion.div
@@ -25,7 +25,7 @@ const Nav = () => {
       }}
     >
       <div className="lg:max-w-[85vw] w-full flex justify-between items-center">
-          <div className="contenedor-logo"><a className="cursor-pointer" href="/"><img className="w-auto h-[75px] lg:h-[100px] mr-auto py-1 lg:p-2" src="/img/logo octavio-04.png" alt="logo tipo de la silueta de Octavio Marulanda" /></a></div>
+          <div className="contenedor-logo"><a className="cursor-pointer" href="/"><img className="w-auto h-[75px] lg:h-[70px] mr-auto py-1 lg:p-2" src="/img/logo octavio-04.png" alt="logo tipo de la silueta de Octavio Marulanda" /></a></div>
           <ul className="list-none lg:flex items-center gap-6 hidden">
             <li className="uppercase" ><a href="/home">Home</a></li>
             <li className="uppercase" ><a href="/biografia">Biografia</a></li>

@@ -1,54 +1,41 @@
-# Astro Starter Kit: Basics
+# Biografia Octavio Marulanda Morales - ASTRO Framework
 
-```sh
-npm create astro@latest -- --template basics
-```
+| Home                                                                                  <img src="public/readme/gif_home.gif" alt="animacion del home" /> |
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+| Rica animación de los libros y single libros                                                                                  <img src="public/readme/libros.gif" alt="animacion de libros" /> |
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+| Efecto Zoom Parallax y parrafo lector scroll                                                                                <img src="public/readme/zoomParallax.gif" alt="animacion de libros" /> |
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Ver en [Vercel](https://biografia-octavio-marulanda-morales.vercel.app/)
 
-## 🚀 Project Structure
+## 🚀 Vida y obras de Octavio Marulanda Morales
 
-Inside of your Astro project, you'll see the following folders and files:
+Sitio web diseñado con el framework ASTRO para destacar la biografía del distinguido Octavio Marulanda Morales, enriquecido con elegantes animaciones implementadas con Framer Motion.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 💯 Features
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- Totalmente responsive
+- Smooth animation
+- Scroll Horizontal
+- Framer Motion
+- Locomotive Scroll
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Instalación
 
-Any static assets, like images, can be placed in the `public/` directory.
+Solo debes copiar el repositorio tal como muestra la imagen
 
-## 🧞 Commands
+<p align="center">
+  <img src="https://i.ibb.co/CPp0nX5/copiar-repo.gif" alt="Lección #6" />
+</p>
 
-All commands are run from the root of the project, from a terminal:
+luego ve a la terminal y haz un git clone tal como muestra la imagen
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+<p align="center">
+  <img src="https://i.ibb.co/Z63C7mf/clonar-repo-1.gif" alt="Lección #6" />
+</p>
 
-## 👀 Want to learn more?
+Ingresas a la carpeta descargada (clonada) y con la extensión de Live Server la ejecutas el cual se auto despliega.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Happy Coding
+
+Sientete libre de hacer los cambios que creas pertinentes.

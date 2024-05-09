@@ -7,10 +7,17 @@ function SmoothScroll({ children }) {
 
       const locomotiveScroll = new LocomotiveScroll({
   
-        direction: 'horizontal',
-        getDirection: function () {
-          return "up";
-        },
+        lenisOptions: {
+          wrapper: window,
+          content: document.documentElement,
+          lerp: 0.07,
+          duration: 1.5,
+          orientation: 'vertical',
+          gestureOrientation: 'vertical',
+          smoothWheel: true,
+          smoothTouch: false,
+          normalizeWheel: true,
+      },
       });
 
       const currentUrl = window.location.href;

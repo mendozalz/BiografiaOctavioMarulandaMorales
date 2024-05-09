@@ -54,7 +54,7 @@ const Card = ({ card }: { card: CardType }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[100vh] lg:h-[92vh] w-[100vw] overflow-hidden bg-white"
+      className="group relative h-[100vh] lg:h-[100vh] w-[100vw] overflow-hidden bg-white"
       data-scroll-section
       ref={parallaxRef}
     >
