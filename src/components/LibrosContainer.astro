@@ -3,6 +3,9 @@ import { getCollection } from "astro:content";
 import EncapsulamientoLibros from "./EncapsulamientoLibros";
 
 const posts = await getCollection("libros");
+console.log(posts);
+const librosOrdenados = posts.sort((a, b) => a.data.orden - b.data.orden);
+console.log(librosOrdenados);
 
 ---
 

@@ -1,12 +1,12 @@
 ---
-heroImg: "/portadasLibros/pombero_portada.jpg"
-orden: 12
-title: "Historias del Pombero"
+heroImg: "/portadasLibros/libro4.jpg"
+orden: 4
+title: "Historia de un hombre que se convirtio en simbolo"
 autor: "Octavio Marulanda Morales"
 bio: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío."
-description: "Historias del Pombero"
+description: "Historia de un hombre que se convirtio en simbolo"
 pubDate: "28 Abril 2024"
-category: ["Infantiles", " Descargable"]
+category: ["Música", " Descargable"]
 descargar: "#"
 ---
 

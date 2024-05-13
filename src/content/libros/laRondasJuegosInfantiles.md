@@ -1,5 +1,6 @@
 ---
 heroImg: "/portadasLibros/las_rondas_juegos.jpg"
+orden: 9
 title: "La rondas y juegos infantiles"
 autor: "Octavio Marulanda Morales"
 bio: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío."

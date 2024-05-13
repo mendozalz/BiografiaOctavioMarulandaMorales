@@ -127,7 +127,7 @@ type CardType = {
 
 const cards: CardType[] = [
   {
-    url: "/fotos_octavio/fondo1.jpg",
+    url: "/img_carrusel/carrusel_1.jpg",
     title1: "Octavio",
     title2: "Marunlanda Morales",
     parrafo: "Teatro",
@@ -135,7 +135,7 @@ const cards: CardType[] = [
     verMas: "/teatro",
   },
   {
-    url: "/fotos_octavio/fondo1_1.jpg",
+    url: "/img_carrusel/carrusel_2.jpg",
     title1: "Octavio",
     title2: "Marunlanda Morales",
     parrafo: "Folclor",
@@ -143,7 +143,7 @@ const cards: CardType[] = [
     verMas: "/folclor",
   },
   {
-    url: "/fotos_octavio/fondo1_2.jpg",
+    url: "/img_carrusel/carrusel_3.jpg",
     title1: "Octavio",
     title2: "Marunlanda Morales",
     parrafo: "Música",
