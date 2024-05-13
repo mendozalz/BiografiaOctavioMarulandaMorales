@@ -1,12 +1,12 @@
 ---
-heroImg: "/portadasLibros/pombero_portada.jpg"
-orden: 12
-title: "Historias del Pombero"
+heroImg: "/portadasLibros/libro6.jpg"
+orden: 6
+title: "Folclor de Colombia"
 autor: "Octavio Marulanda Morales"
 bio: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío."
-description: "Historias del Pombero"
+description: "Folclor de Colombia"
 pubDate: "28 Abril 2024"
-category: ["Infantiles", " Descargable"]
+category: ["Música", " Descargable"]
 descargar: "#"
 ---
 

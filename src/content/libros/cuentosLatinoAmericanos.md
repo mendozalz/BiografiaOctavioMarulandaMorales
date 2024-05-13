@@ -1,5 +1,6 @@
 ---
 heroImg: "/portadasLibros/tradicion_oral_portada.jpg"
+orden: 7
 title: "Cuentos Latinos Americanos de Tradición Oral"
 autor: "Octavio Marulanda Morales"
 bio: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío."

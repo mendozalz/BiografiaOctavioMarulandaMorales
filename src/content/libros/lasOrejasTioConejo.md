@@ -1,5 +1,6 @@
 ---
 heroImg: "/portadasLibros/tio_conejo_portada.jpg"
+orden: 10
 title: "Las orejas de tio conejo"
 autor: "Octavio Marulanda Morales"
 bio: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío."

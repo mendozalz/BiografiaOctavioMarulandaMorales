@@ -1,12 +1,12 @@
 ---
-heroImg: "/portadasLibros/pombero_portada.jpg"
-orden: 12
-title: "Historias del Pombero"
+heroImg: "/portadasLibros/libro1.jpg"
+orden: 1
+title: "Pedro Morales Pino la gloria recobrada"
 autor: "Octavio Marulanda Morales"
 bio: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío."
-description: "Historias del Pombero"
+description: "Pedro Morales Pino la gloria recobrada"
 pubDate: "28 Abril 2024"
-category: ["Infantiles", " Descargable"]
+category: ["Música", " Descargable"]
 descargar: "#"
 ---
 

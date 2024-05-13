@@ -1,5 +1,6 @@
 ---
 heroImg: "/portadasLibros/toby_portada.jpg"
+orden: 8
 title: "La colita de Toby"
 autor: "Octavio Marulanda Morales"
 bio: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío."

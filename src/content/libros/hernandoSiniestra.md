@@ -1,12 +1,12 @@
 ---
-heroImg: "/portadasLibros/pombero_portada.jpg"
-orden: 12
-title: "Historias del Pombero"
+heroImg: "/portadasLibros/libro3.jpg"
+orden: 3
+title: "Hernando Siniestra - Huella y Memoria"
 autor: "Octavio Marulanda Morales"
 bio: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío."
-description: "Historias del Pombero"
+description: "Hernando Siniestra - Huella y Memoria"
 pubDate: "28 Abril 2024"
-category: ["Infantiles", " Descargable"]
+category: ["Música", " Descargable"]
 descargar: "#"
 ---
 
