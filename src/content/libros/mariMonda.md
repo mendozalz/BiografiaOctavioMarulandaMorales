@@ -1,6 +1,6 @@
 ---
 heroImg: "/portadasLibros/marimonda_portada.jpg"
-orden: 11
+orden: 8
 title: "De la Marimonda no se debe hablar"
 autor: "Octavio Marulanda Morales"
 bio: "Nace el 7 de Ocutbre en Manizales, en el barrio Mayo frío."
