@@ -7,6 +7,7 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  href:string
 }
 const {
   title,
@@ -22,7 +23,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="/octavio.ico" />
+    <link href="/fav_negro.ico" rel="icon" media="(prefers-color-scheme: light)">
+    <link href="/fav_blanco.ico" rel="icon" media="(prefers-color-scheme: dark)"> 
+
     <link
       rel="preload"
       href="/fonts/Poppins-Regular.ttf"
@@ -65,3 +68,4 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </body>
   </body>
 </html>
+
